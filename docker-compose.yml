@@ -8,5 +8,6 @@ services:
     volumes:
       - .:/home/kaggle
       - .kaggle:/home/kaggle/.kaggle
+    working_dir: /home/kaggle
     environment:
       - KAGGLE_CONFIG_DIR=/home/kaggle/${KAGGLE_CONFIG_DIR}
