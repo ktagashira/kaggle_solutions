@@ -1,0 +1,12 @@
+services:
+  kaggle:
+    image: gcr.io/kaggle-images/python:latest
+    container_name: kaggle_container
+    platform: linux/amd64
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/kaggle
+      - .kaggle:/home/kaggle/.kaggle
+    environment:
+      - KAGGLE_CONFIG_DIR=/home/kaggle/${KAGGLE_CONFIG_DIR}
